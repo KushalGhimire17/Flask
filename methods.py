@@ -1,9 +1,9 @@
-from flask import Flask
+from flask import Flask,request
 app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return "Methods used is %s ",%request.method
+    return "Methods used is {}".format(request.method)
 
 @app.route("/bacon", methods=["GET","POST"])
 def bacon():
@@ -12,5 +12,5 @@ def bacon():
     else:
         return "You are using GET."
 
-if __name__ == if __name__ == "__main__":
+if __name__ == "__main__":
     app.run()
