@@ -1,0 +1,15 @@
+virtual env setup : py -m venv env
+virtual env activate : env\Scripts\\activate
+virtual env deactivate : deactivate
+
+https://medium.com/@krishnaregmi/pipenv-vs-virtualenv-vs-conda-environment-3dde3f6869ed
+
+flask:
+set FLASK_APP = app.py
+        OR 
+export FLASK_APP = app.py
+flask run
+
+#new
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", debug=True, port=5000)
